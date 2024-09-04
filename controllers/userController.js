@@ -15,9 +15,6 @@ exports.login = async (req, res) => {
     const { email, password } = req.body;
     try {
         const user = await User.findOne({ where: { email } });
-        //console.log("User : " + user);
-        //console.log("Request Password : " + password);
-        //console.log("User Password : " + user.password);
         if (!user) {
             throw new Error("Unauthenticated");
         }
@@ -35,9 +32,9 @@ exports.login = async (req, res) => {
             message: "Invalid email or password",
         });
     }
-
-
-    //res.status(200).json({"Status" : "Under Construction"});
-
 };
+
+/*exports.login = async (req, res) => {
+    res.status(200).json({"Status" : "Under Construction"});
+};*/
 

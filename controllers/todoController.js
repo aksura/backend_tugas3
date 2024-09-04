@@ -24,6 +24,10 @@ exports.todo = async (req, res) => {
         });
       }
 
-    //res.status(200).json({"Status" : "Under Construction"});
+    
 };
+
+/*exports.todo = async (req, res) => {
+  res.status(200).json({"Status" : "Under Construction"});
+};*/
 
